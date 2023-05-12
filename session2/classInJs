@@ -1,0 +1,26 @@
+class Employee {
+    constructor(n, a, s=0) {
+        this.name = n;
+        this.age = a;
+        this.salary = s;
+    }
+    display = function () {
+        console.log(this.name, this.age, this.salary);
+    };
+}
+
+// let e1 = new Employee("amit",23,23.44)
+// e1.display()
+
+class Student extends Employee {
+    constructor(n1, a1, s, rollno) {
+        super(n1, a1, s);
+        this.rollno = rollno;
+    }
+    Details = function () {
+        console.log(`Rollno: ${this.rollno}, \nName: ${this.name}`);
+    }
+}
+
+let st1 = new Student("Manish", 23,0,123);
+st1.Details()
